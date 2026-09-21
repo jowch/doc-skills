@@ -11,40 +11,40 @@ Don't use: avoid in all cases (rewrite, or mention a code identifier once in
 
 | Instead of | Use |
 |---|---|
-| above / below (in a doc) | preceding / following / earlier / later |
-| above / higher (versions) | later (`2.2 or later`) |
-| below / lower (versions) | earlier |
-| allows you to / enables you to | lets you |
-| as of this writing | omit (timeless) |
-| blacklist / whitelist | allowlist / blocklist, or rewrite (`add them to an allowlist`) |
-| check / uncheck (checkbox) | select / clear |
-| click on | click |
-| click here | descriptive link text |
-| presently / currently (supported) | omit, or name the version |
-| desire / wish | want / need |
-| e.g. / i.e. | for example / that is |
-| etc. / and so on | such as / like / including |
-| execute (generic) | run |
-| hamburger / kebab / zippy | the control's `aria-label` (`**Menu**`) |
-| hang (process) | stop responding / isn't responding |
-| hit (click/press) | click / press / enter |
-| hover | hold the pointer over |
-| in order to | to (unless `to` is ambiguous) |
-| just / simply / easy / easily | omit |
-| kill / terminate (generic stop) | stop / exit / cancel / end |
-| leverage / utilize | use |
-| let's | you / imperative |
-| log in (verb) | sign in (unless the product says log in) |
-| master / slave | primary / replica, controller / worker, … |
-| once (meaning after) | after |
-| please (in steps) | omit |
-| sanity check | quick check / confidence check |
-| since (meaning because) | because |
-| via | rewrite (`by using`, `over`, `through`) |
-| vice versa | spell out both directions |
-| we (the reader) | you |
-| while (contrast) | although |
-| will / would (general behavior) | present tense / can |
+| `above` / `below` (in a doc) | preceding / following / earlier / later |
+| `above` / `higher` (versions) | later (`2.2 or later`) |
+| `below` / `lower` (versions) | earlier |
+| `allows you to` / `enables you to` | lets you |
+| `as of this writing` | omit (timeless) |
+| `blacklist` / `whitelist` | allowlist / blocklist, or rewrite (`add them to an allowlist`) |
+| `check` / `uncheck` (checkbox) | select / clear |
+| `click on` | click |
+| `click here` | descriptive link text |
+| `presently` / `currently` (supported) | omit, or name the version |
+| `desire` / `wish` | want / need |
+| `e.g.` / `i.e.` | for example / that is |
+| `etc.` / `and so on` | such as / like / including |
+| `execute` (generic) | run |
+| `hamburger` / `kebab` / `zippy` | the control's `aria-label` (`**Menu**`) |
+| `hang` (process) | stop responding / isn't responding |
+| `hit` (click/press) | click / press / enter |
+| `hover` | hold the pointer over |
+| `in order to` | to (unless `to` is ambiguous) |
+| `just` / `simply` / `easy` / `easily` | omit |
+| `kill` / `terminate` (generic stop) | stop / exit / cancel / end |
+| `leverage` / `utilize` | use |
+| `let's` | you / imperative |
+| `log in` (verb) | sign in (unless the product says log in) |
+| `master` / `slave` | primary / replica, controller / worker, … |
+| `once` (meaning after) | after |
+| `please` (in steps) | omit |
+| `sanity check` | quick check / confidence check |
+| `since` (meaning because) | because |
+| `via` | rewrite (`by using`, `over`, `through`) |
+| `vice versa` | spell out both directions |
+| `we` (the reader) | you |
+| `while` (contrast) | although |
+| `will` / `would` (general behavior) | present tense / can |
 
 ## Spelling and form
 

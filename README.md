@@ -29,26 +29,32 @@ Requires a Cursor Teams or Enterprise plan.
 
 1. Open **Dashboard → Plugins & MCPs**.
 2. Under **Team Marketplaces**, click **Add Marketplace**.
-3. Choose **Import from Repo** and paste
-   `https://github.com/jowch/doc-skills`.
-4. Review the `doc-skills` plugin, set marketplace access, and save.
-   Turn on **Auto Refresh** if you want pushes to the tracked branch to
-   re-index (needs the Cursor GitHub App on the repo).
+3. Choose **Import from Repo**.
+4. Paste `https://github.com/jowch/doc-skills`.
+5. Review the `doc-skills` plugin, set marketplace access, and save.
+6. Optional: To re-index when you push to the tracked branch, turn on
+   **Auto Refresh**. This requires the Cursor GitHub App on the repo.
 
 ### Customize (developers)
 
-After the marketplace is imported, open **Customize** in the sidebar and
-install `doc-skills` from the team marketplace.
+After the marketplace is imported, do the following:
 
-You can also use **Customize → From GitHub Repository** with the same URL if
-your Cursor build exposes that import path.
+1. Open **Customize** in the sidebar.
+2. Install `doc-skills` from the team marketplace.
+
+If your Cursor build exposes **Customize → From GitHub Repository**, import
+the same URL from there.
 
 ### Local smoke test
 
-Copy this repository to `~/.cursor/plugins/local/doc-skills`,
-reload the window, and confirm the skill appears in **Customize**. Local
-imports must be allowed
-(**Dashboard → Settings → Security & Identity → Marketplace and Plugins**).
+To try the plugin without a marketplace, do the following:
+
+1. In **Dashboard → Settings → Security & Identity → Marketplace and
+   Plugins**, allow local imports.
+2. Copy this repository to `~/.cursor/plugins/local/doc-skills`.
+3. Reload the window.
+4. Confirm the skill appears in **Customize**.
+
 A marketplace install of the same name wins over the local copy.
 
 ## Use it

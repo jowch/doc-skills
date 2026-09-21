@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Heuristic flags for Google developer-doc style. Not a grade.
 
-Prints Markdown table hits for audit-doc-style. Skips fenced code and
-vendored trees. Treat output as candidates; quoted UI and identifiers can
-be fine.
+Prints Markdown table hits for audit-doc-style. Skips fenced code,
+"Not recommended:" counterexamples, and vendored trees. Treat output as
+candidates; quoted UI and identifiers can be fine.
 
 Usage:
   python3 scan.py --list [PATH ...]
@@ -99,6 +99,11 @@ def strip_inline_code(line: str) -> str:
     return re.sub(r"`[^`]*`", " ", line)
 
 
+def is_style_counterexample(line: str) -> bool:
+    """Skip Don't-list demonstrations so the scanner can audit this tree."""
+    return bool(re.match(r"(?i)not recommended:", line.lstrip()))
+
+
 def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
     hits: list[tuple[int, str, str, str]] = []
     try:
@@ -107,6 +112,8 @@ def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
         print(f"warning: skip {path}: {exc}", file=sys.stderr)
         return hits
     for lineno, line in prose_lines(text):
+        if is_style_counterexample(line):
+            continue
         sample = strip_inline_code(line)
         for severity, pattern, hint in RULES:
             if pattern.search(sample):

@@ -22,7 +22,7 @@ the docs.
 
 ## Workflow
 
-### 1. Discover
+### Discover
 
 Find the docs the user named. If they named none, search the repo for
 Markdown and HTML, skipping vendored trees:
@@ -40,7 +40,7 @@ find . \( -name node_modules -o -name .git -o -name vendor -o -name dist -o -nam
 Skip `node_modules`, `.git`, `vendor`, `dist`, `build`, `.venv`, and other
 dependency trees. Don't audit generated API dumps unless asked.
 
-### 2. Heuristic scan
+### Heuristic scan
 
 Run the bundled scanner on the target paths. It flags high-frequency Don't
 terms; it does **not** grade voice. Hits are candidates, not automatic fails
@@ -53,7 +53,7 @@ python3 skills/audit-doc-style/scripts/scan.py PATH [PATH...]
 Load `../google-developer-style/references/` only for criteria that actually
 failed. Don't load every reference.
 
-### 3. Score
+### Score
 
 Read [references/rubric.md](references/rubric.md). Score each file (or the
 set, if the user asked for a package-level grade).
@@ -69,7 +69,7 @@ set, if the user asked for a package-level grade).
 
 Grades: **A** 90–100, **B** 70–89, **C** 50–69, **D** 30–49, **F** 0–29.
 
-### 4. Report (required before edits)
+### Report (required before edits)
 
 ```markdown
 ## Doc style report
@@ -104,7 +104,7 @@ the Google-style rewrite. Blocking vs nit matches the review-skills split:
 correctness/accessibility/inclusion blocks; serial commas and hyphenation
 don't.
 
-### 5. Propose, then edit
+### Propose, then edit
 
 Show diffs. Don't restyle the whole page. Don't "improve" project-specific
 style that already wins (see `google-developer-style` authority). Apply
