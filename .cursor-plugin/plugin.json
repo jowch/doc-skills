@@ -1,0 +1,26 @@
+{
+  "name": "google-developer-style",
+  "displayName": "Google developer style",
+  "version": "1.0.0",
+  "description": "Write developer documentation in the Google developer documentation style: conversational, second person, active voice, accessible, and globally readable.",
+  "author": {
+    "name": "Jonathan Chen"
+  },
+  "homepage": "https://github.com/jowch/doc-skills",
+  "repository": "https://github.com/jowch/doc-skills",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "style-guide",
+    "technical-writing",
+    "google-style",
+    "markdown"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "docs",
+    "writing",
+    "style"
+  ],
+  "skills": "./skills/"
+}

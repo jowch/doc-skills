@@ -1,0 +1,29 @@
+{
+  "name": "doc-skills",
+  "owner": {
+    "name": "Jonathan Chen"
+  },
+  "metadata": {
+    "description": "Agent skills for writing docs"
+  },
+  "plugins": [
+    {
+      "name": "google-developer-style",
+      "source": ".",
+      "description": "Write developer documentation in the Google developer documentation style.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jonathan Chen"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/jowch/doc-skills",
+      "repository": "https://github.com/jowch/doc-skills",
+      "keywords": [
+        "documentation",
+        "style-guide",
+        "technical-writing",
+        "google-style"
+      ]
+    }
+  ]
+}
