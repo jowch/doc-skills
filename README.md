@@ -9,11 +9,17 @@ short `SKILL.md` plus `references/` loaded on demand.
 | Plugin | Skill | What it does |
 |---|---|---|
 | `google-developer-style` | `google-developer-style` | Distills the [Google developer documentation style guide](https://developers.google.com/style) so agents write docs in that voice. |
+| `google-developer-style` | `audit-doc-style` | Grades existing docs with a 100-point rubric, then proposes targeted fixes. Invoke with `/audit-doc-style`. |
 
-The Google-style skill stays short. Detail lives in
+The write skill stays short. Detail lives in
 `skills/google-developer-style/references/` and is loaded only when needed.
 This is not a copy of the full guide. When a topic isn't covered, use the
 canonical page on [developers.google.com/style](https://developers.google.com/style).
+
+`audit-doc-style` is the review loop: discover files, run a heuristic scan,
+score against `skills/audit-doc-style/references/rubric.md`, print the report,
+then edit. The scanner (`skills/audit-doc-style/scripts/scan.py`) only flags
+high-frequency Don't terms. It is not a voice linter — don't add one.
 
 ## Add it to Cursor (team marketplace)
 
@@ -49,10 +55,21 @@ A marketplace install of the same name wins over the local copy.
 
 Ask the agent to write or edit docs, or invoke `/google-developer-style`.
 Typical prompts: "Write this README in Google developer style", "Edit these
-API docs", "Check this procedure against Google style".
+API docs".
 
-The agent should keep `SKILL.md` loaded and open a single `references/*.md`
-file when the draft needs that topic.
+To grade what's already written, invoke `/audit-doc-style` or say "audit
+these docs against Google style". The agent prints a scored report before
+changing files.
+
+The writer should keep its `SKILL.md` loaded and open a single
+`references/*.md` file when the draft needs that topic. The auditor loads
+the rubric plus only the write-skill references that a finding needs.
+
+Optional pre-scan from this repo:
+
+```bash
+python3 skills/audit-doc-style/scripts/scan.py docs README.md
+```
 
 ## Layout
 
@@ -62,9 +79,13 @@ file when the draft needs that topic.
 │   ├── plugin.json
 │   └── marketplace.json
 ├── skills/
-│   └── google-developer-style/
+│   ├── google-developer-style/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   └── audit-doc-style/
 │       ├── SKILL.md
-│       └── references/
+│       ├── references/
+│       └── scripts/scan.py
 ├── LICENSE
 └── README.md
 ```

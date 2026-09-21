@@ -1,8 +1,8 @@
 {
   "name": "google-developer-style",
   "displayName": "Google developer style",
-  "version": "1.0.0",
-  "description": "Write developer documentation in the Google developer documentation style: conversational, second person, active voice, accessible, and globally readable.",
+  "version": "1.1.0",
+  "description": "Write and audit developer documentation in the Google developer documentation style: conversational, second person, active voice, accessible, and globally readable.",
   "author": {
     "name": "Jonathan Chen"
   },

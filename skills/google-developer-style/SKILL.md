@@ -61,3 +61,5 @@ Canonical source for anything not covered here: [developers.google.com/style](ht
 ## Before you ship
 
 Check the draft against **Always** and **Never**. If a term looks loaded or ambiguous, open `references/word-list.md`. If the page is a procedure, open `references/formatting.md` and `references/ui-text.md`.
+
+To grade existing docs (score, checklist, diffs), use the `audit-doc-style` skill.
