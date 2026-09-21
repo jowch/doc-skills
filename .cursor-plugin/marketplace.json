@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "name": "google-developer-style",
+      "name": "doc-skills",
       "source": ".",
       "description": "Write and audit developer documentation in the Google developer documentation style.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": {
         "name": "Jonathan Chen"
       },

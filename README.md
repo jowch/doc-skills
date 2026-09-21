@@ -8,8 +8,8 @@ short `SKILL.md` plus `references/` loaded on demand.
 
 | Plugin | Skill | What it does |
 |---|---|---|
-| `google-developer-style` | `google-developer-style` | Distills the [Google developer documentation style guide](https://developers.google.com/style) so agents write docs in that voice. |
-| `google-developer-style` | `audit-doc-style` | Grades existing docs with a 100-point rubric, then proposes targeted fixes. Invoke with `/audit-doc-style`. |
+| `doc-skills` | `google-developer-style` | Distills the [Google developer documentation style guide](https://developers.google.com/style) so agents write docs in that voice. |
+| `doc-skills` | `audit-doc-style` | Grades existing docs with a 100-point rubric, then proposes targeted fixes. Invoke with `/audit-doc-style`. |
 
 The write skill stays short. Detail lives in
 `skills/google-developer-style/references/` and is loaded only when needed.
@@ -31,21 +31,21 @@ Requires a Cursor Teams or Enterprise plan.
 2. Under **Team Marketplaces**, click **Add Marketplace**.
 3. Choose **Import from Repo** and paste
    `https://github.com/jowch/doc-skills`.
-4. Review the `google-developer-style` plugin, set marketplace access, and save.
+4. Review the `doc-skills` plugin, set marketplace access, and save.
    Turn on **Auto Refresh** if you want pushes to the tracked branch to
    re-index (needs the Cursor GitHub App on the repo).
 
 ### Customize (developers)
 
 After the marketplace is imported, open **Customize** in the sidebar and
-install `google-developer-style` from the team marketplace.
+install `doc-skills` from the team marketplace.
 
 You can also use **Customize → From GitHub Repository** with the same URL if
 your Cursor build exposes that import path.
 
 ### Local smoke test
 
-Copy this repository to `~/.cursor/plugins/local/google-developer-style`,
+Copy this repository to `~/.cursor/plugins/local/doc-skills`,
 reload the window, and confirm the skill appears in **Customize**. Local
 imports must be allowed
 (**Dashboard → Settings → Security & Identity → Marketplace and Plugins**).
